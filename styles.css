@@ -6,7 +6,7 @@ body {
     color: black;  /* Black font color */
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: auto;
 }
 
 /* Apply Lobster font to the heading */
