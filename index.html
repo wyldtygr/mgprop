@@ -2,11 +2,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="title">badumtss</title>
+    <title>Miami GP Getaway Proposal</title>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Make sure body allows scrolling on mobile */
+        /* General Styles */
         body {
             text-align: center;
             font-family: 'Roboto', sans-serif;
@@ -16,6 +16,7 @@
             overflow-x: hidden;
         }
 
+        /* Responsive Container */
         .container {
             display: flex;
             flex-direction: column;
@@ -23,12 +24,15 @@
             align-items: center;
             min-height: 100vh;
             padding: 20px;
+            width: 90%;
+            max-width: 1200px; /* Prevents content from stretching too wide on large screens */
+            margin: auto;
         }
 
         /* Responsive Car Image */
         .car-image img {
-            width: 80%; /* Adjusts width for mobile */
-            max-width: 300px; /* Prevents the car from being too large */
+            width: 80%; /* Adjusts dynamically for both PC and mobile */
+            max-width: 300px; /* Prevents oversized images */
             height: auto;
             transform: scaleX(-1);
         }
@@ -36,33 +40,44 @@
         /* Headline Styling */
         #headline {
             font-family: 'Lobster', cursive;
-            font-size: 6vw; /* Adjusts size dynamically based on screen width */
+            font-size: clamp(24px, 5vw, 50px); /* Adapts between 24px and 50px depending on screen size */
             margin-top: 10px;
         }
 
         /* Description Text */
         #description, #details {
-            font-size: 4vw; /* Adjusts text size on mobile */
+            font-size: clamp(16px, 4vw, 22px); /* Scales text for both mobile and desktop */
             max-width: 90%;
             padding: 10px;
         }
 
-        /* Button Styling */
+        /* Responsive Button */
         .btn {
             background: #ffcc00;
             border: none;
             padding: 12px 20px;
-            font-size: 5vw; /* Adjusts for mobile */
+            font-size: clamp(14px, 5vw, 20px); /* Adjusts for smaller and larger screens */
             cursor: pointer;
             border-radius: 10px;
             margin-top: 20px;
             transition: 0.3s;
-            max-width: 300px; /* Prevents it from being too wide */
+            max-width: 300px; /* Prevents button from being too wide */
             width: 90%;
         }
 
         .btn:hover {
             background: #ffaa00;
+        }
+
+        /* Media Query for Larger Screens */
+        @media (min-width: 768px) {
+            .container {
+                width: 70%; /* Centers content and limits width on desktops */
+            }
+
+            .car-image img {
+                width: 50%; /* Reduces size for larger screens */
+            }
         }
     </style>
 </head>
