@@ -13,49 +13,73 @@ body {
 
 /* Apply Audiowide font to the heading */
 #headline {
-    font-family: 'Audiowide', sans-serif;  /* Audiowide for the heading */
+    font-family: 'Audiowide', sans-serif;  
+    font-size: clamp(24px, 5vw, 50px); /* Responsive font scaling */
+    margin-top: 10px;
 }
 
-/* Make the car emoji large and animate its movement from left to right */
+/* Make the car image large and position it lower */
 #car {
-    font-size: 6rem;  /* Makes the car emoji large */
+    font-size: 6rem;  
     position: absolute;
     left: -150px;
-    top: 65%;
-    transform: translateX(0) scaleX(-1);  /* Start off the screen on the left and flip it horizontally */
-    transition: transform 2s ease-in-out;  /* Smooth transition for the car animation */
+    top: 75%; /* Lowered for better visibility */
+    transform: translateX(0) scaleX(-1);
+    transition: transform 2s ease-in-out;
+}
+
+/* Responsive Car Image */
+.car-image img {
+    width: 80%; /* Adjusts dynamically */
+    max-width: 300px; /* Prevents it from being too big */
+    height: auto;
 }
 
 /* Hide description and details by default */
 #description, #details {
-    font-family: 'Audiowide', sans-serif;  /* Audiowide for description */
-    text-align: center;
-    font-size: 1.1em;
-    text-shadow: none;  /* Remove text shadow */
+    font-size: clamp(16px, 4vw, 22px); /* Scales with screen size */
+    text-shadow: none;  
     display: none;
 }
 
+/* Responsive Button */
 .btn {
     background: #ffcc00;
     border: none;
-    padding: 15px 30px;
-    font-size: 18px;
+    padding: 12px 20px;
+    font-size: clamp(14px, 5vw, 20px); /* Adjusts based on screen size */
     cursor: pointer;
     border-radius: 10px;
     margin-top: 20px;
     transition: 0.3s;
-    display: none;
-    font-family: 'Audiowide', sans-serif;  /* Audiowide for button text */
+    max-width: 300px; /* Prevents button from being too wide */
+    width: 90%;
 }
 
+.btn:hover {
+    background: #ffaa00;
+}
+
+/* Responsive Container */
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px; /* Prevents stretching on large screens */
+    margin: auto;
 }
 
-.btn:hover {
-    background: #ffaa00;
+/* Media Query for Larger Screens */
+@media (min-width: 768px) {
+    .container {
+        width: 70%; /* Limits width on desktops */
+    }
+
+    .car-image img {
+        width: 50%; /* Reduces size for larger screens */
+    }
 }
