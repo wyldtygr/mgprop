@@ -1,85 +1,76 @@
-/* Apply Audiowide font for an F1-inspired vibe */
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 body {
-    font-family: 'Audiowide', sans-serif;  /* F1-inspired racing font */
+    font-family: 'Audiowide', sans-serif;
     text-align: center;
-    background-color: white;  /* White background */
-    color: black;  /* Black font color */
+    background-color: white;
+    color: black;
     margin: 0;
     padding: 0;
     overflow: auto;
+    animation: fadeIn 1s ease-in-out;
+    transition: opacity 0.6s ease-in-out;
 }
 
-/* Apply Audiowide font to the heading */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 #headline {
-    font-family: 'Audiowide', sans-serif;  
-    font-size: clamp(24px, 5vw, 50px); /* Responsive font scaling */
-    margin-top: 10px;
+    font-family: 'Audiowide', sans-serif;
 }
 
-/* Make the car image large and position it lower */
 #car {
-    font-size: 6rem;  
+    font-size: 6rem;
     position: absolute;
     left: -150px;
-    top: 75%; /* Lowered for better visibility */
+    top: 65%;
     transform: translateX(0) scaleX(-1);
     transition: transform 2s ease-in-out;
 }
 
-/* Responsive Car Image */
-.car-image img {
-    width: 80%; /* Adjusts dynamically */
-    max-width: 300px; /* Prevents it from being too big */
-    height: auto;
-}
-
-/* Hide description and details by default */
 #description, #details {
-    font-size: clamp(16px, 4vw, 22px); /* Scales with screen size */
-    text-shadow: none;  
+    font-family: 'Audiowide', sans-serif;
+    text-align: center;
+    font-size: 1.1em;
+    text-shadow: none;
     display: none;
 }
 
-/* Responsive Button */
 .btn {
     background: #ffcc00;
     border: none;
-    padding: 12px 20px;
-    font-size: clamp(14px, 5vw, 20px); /* Adjusts based on screen size */
+    padding: 15px 30px;
+    font-size: 18px;
     cursor: pointer;
     border-radius: 10px;
     margin-top: 20px;
     transition: 0.3s;
-    max-width: 300px; /* Prevents button from being too wide */
-    width: 90%;
+    display: none;
+    font-family: 'Audiowide', sans-serif;
 }
 
 .btn:hover {
     background: #ffaa00;
+    box-shadow: 0 0 15px rgba(255, 170, 0, 0.9);
+    transform: scale(1.05);
 }
 
-/* Responsive Container */
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-    width: 90%;
-    max-width: 1200px; /* Prevents stretching on large screens */
-    margin: auto;
+    height: 100vh;
 }
 
-/* Media Query for Larger Screens */
-@media (min-width: 768px) {
-    .container {
-        width: 70%; /* Limits width on desktops */
-    }
-
-    .car-image img {
-        width: 50%; /* Reduces size for larger screens */
-    }
+td, th {
+    text-align: center;
+    vertical-align: middle;
 }
+
