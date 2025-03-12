@@ -1,6 +1,8 @@
-/* Apply Roboto font to body and general text */
+/* Apply Audiowide font for an F1-inspired vibe */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
 body {
-    font-family: 'Roboto', sans-serif;  /* Roboto for general text */
+    font-family: 'Audiowide', sans-serif;  /* F1-inspired racing font */
     text-align: center;
     background-color: white;  /* White background */
     color: black;  /* Black font color */
@@ -9,9 +11,9 @@ body {
     overflow: auto;
 }
 
-/* Apply Lobster font to the heading */
+/* Apply Audiowide font to the heading */
 #headline {
-    font-family: 'Lobster', cursive;  /* Lobster for the heading */
+    font-family: 'Audiowide', sans-serif;  /* Audiowide for the heading */
 }
 
 /* Make the car emoji large and animate its movement from left to right */
@@ -26,7 +28,7 @@ body {
 
 /* Hide description and details by default */
 #description, #details {
-    font-family: 'Roboto', sans-serif;  /* Roboto for description */
+    font-family: 'Audiowide', sans-serif;  /* Audiowide for description */
     text-align: center;
     font-size: 1.1em;
     text-shadow: none;  /* Remove text shadow */
@@ -43,7 +45,7 @@ body {
     margin-top: 20px;
     transition: 0.3s;
     display: none;
-    font-family: 'Roboto', sans-serif;  /* Roboto for button text */
+    font-family: 'Audiowide', sans-serif;  /* Audiowide for button text */
 }
 
 .container {
