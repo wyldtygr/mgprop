@@ -6,24 +6,35 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            overflow-y: auto; /* Ensures scrolling */
+            overflow-y: auto; /* Ensure scrolling */
             text-align: center;
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 50px; /* Adds space at the bottom */
+        }
+        .table-container {
+            width: 100%;
+            overflow-x: auto; /* Allows horizontal scrolling if needed */
+            display: flex;
+            justify-content: center;
         }
         table {
-            width: 60%;
+            width: 90%; /* Make it more responsive */
+            max-width: 600px; /* Limits width on large screens */
             margin: 20px auto;
             text-align: center;
             border-collapse: collapse;
         }
         img {
-            width: 70%;
+            width: 90%; /* Ensures image scales well */
             max-width: 800px;
             border-radius: 10px;
         }
         .bottom-text {
-            margin: 20px 0; /* Adds space */
+            margin: 20px auto; /* Ensures space */
             font-size: 1.2em;
+            padding: 10px;
         }
     </style>
 </head>
@@ -31,32 +42,34 @@
     <h1>Welcome to Race Weekend! 🏎️🔥</h1>
     <p>Get ready for an unforgettable Miami GP experience! 🌴🏁</p>
 
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Item</th>
-                <th>Date</th>
-                <th>$$$</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Flight</td>
-                <td>1-5 May<br><br>2-5 May</td>
-                <td>One Stop $200<br><br>One Stop $240<br>Non Stop $260</td>
-            </tr>
-            <tr>
-                <td>F1 Ticket</td>
-                <td>3 Days<br><br>2 Days (Sprint, Quali, Race)<br><br>1 Day (Race Day)</td>
-                <td>Campus Pass $430<br><br>Grandstand $675<br><br>Grandstand $505</td>
-            </tr>
-            <tr>
-                <td>Hotel</td>
-                <td>1-5 May<br><br>2-5 May</td>
-                <td>$400-$450/pax<br><br>$350-$400/pax</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="table-container">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Date</th>
+                    <th>$$$</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Flight</td>
+                    <td>1-5 May<br><br>2-5 May</td>
+                    <td>One Stop $200<br><br>One Stop $240<br>Non Stop $260</td>
+                </tr>
+                <tr>
+                    <td>F1 Ticket</td>
+                    <td>3 Days<br><br>2 Days (Sprint, Quali, Race)<br><br>1 Day (Race Day)</td>
+                    <td>Campus Pass $430<br><br>Grandstand $675<br><br>Grandstand $505</td>
+                </tr>
+                <tr>
+                    <td>Hotel</td>
+                    <td>1-5 May<br><br>2-5 May</td>
+                    <td>$400-$450/pax<br><br>$350-$400/pax</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
     <div>
         <img src="miami_gp.jpg" alt="Miami GP">
@@ -66,6 +79,6 @@
         <p>Hope to see us there hehe! 🏎️🏎️🏎️</p>
     </div>
 
-    
 </body>
 </html>
+
