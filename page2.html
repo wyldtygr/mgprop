@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lights Out</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+        }
+        .lights {
+            display: flex;
+            gap: 10px;
+        }
+        .light {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            opacity: 1;
+            transition: opacity 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="lights">
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+    </div>
+    
+    <script>
+        let lights = document.querySelectorAll('.light');
+        let index = 0;
+
+        function turnOffLights() {
+            if (index < lights.length) {
+                lights[index].style.opacity = '0';
+                index++;
+                setTimeout(turnOffLights, 1000);
+            } else {
+                window.location.href = "page3.html"; // Move to final page
+            }
+        }
+
+        setTimeout(turnOffLights, 1000);
+    </script>
+</body>
+</html>
