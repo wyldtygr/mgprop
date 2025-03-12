@@ -4,12 +4,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Race Weekend</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            overflow-y: auto; /* Ensures scrolling */
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 60%;
+            margin: 20px auto;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        img {
+            width: 70%;
+            max-width: 800px;
+            border-radius: 10px;
+        }
+        .bottom-text {
+            margin: 20px 0; /* Adds space */
+            font-size: 1.2em;
+        }
+    </style>
 </head>
 <body>
     <h1>Welcome to Race Weekend! 🏎️🔥</h1>
     <p>Get ready for an unforgettable Miami GP experience! 🌴🏁</p>
 
-    <table border="1" style="width: 60%; margin: 20px auto; text-align: center; border-collapse: collapse;">
+    <table border="1">
         <thead>
             <tr>
                 <th>Item</th>
@@ -20,60 +42,28 @@
         <tbody>
             <tr>
                 <td>Flight</td>
-                <td>
-                    1-5 May<br>
-                    <br>
-                    2-5 May
-                </td>
-                <td>
-                    <br>
-                    One Stop $200<br>
-                    <br>
-                    One Stop $240<br>
-                    Non Stop $260
-                </td>
+                <td>1-5 May<br><br>2-5 May</td>
+                <td>One Stop $200<br><br>One Stop $240<br>Non Stop $260</td>
             </tr>
             <tr>
                 <td>F1 Ticket</td>
-                <td>
-                    3 Days<br>
-                    <br>
-                    2 Days (Sprint, Quali, Race)<br>
-                    <br>
-                    1 Day (Race Day)
-                </td>
-                <td>
-                    Campus Pass $430<br>
-                    <br>
-                    Grandstand $675<br>
-                    <br>
-                    Grandstand $505
-                </td>
+                <td>3 Days<br><br>2 Days (Sprint, Quali, Race)<br><br>1 Day (Race Day)</td>
+                <td>Campus Pass $430<br><br>Grandstand $675<br><br>Grandstand $505</td>
             </tr>
             <tr>
                 <td>Hotel</td>
-                <td>
-                    1-5 May<br>
-                    <br>
-                    2-5 May
-                </td>
-                <td>
-                    $400-$450/pax<br>
-                    <br>
-                    $350-$400/pax
-                </td>
+                <td>1-5 May<br><br>2-5 May</td>
+                <td>$400-$450/pax<br><br>$350-$400/pax</td>
             </tr>
         </tbody>
     </table>
 
-         <!-- Image Below the Table -->
-     <div style="text-align: center; margin-top: 20px;">
-        <img src="miami_gp.jpg" alt="Miami GP" style="width: 70%; max-width: 800px; border-radius: 10px;">
+    <div>
+        <img src="miami_gp.jpg" alt="Miami GP">
     </div>
 
-  <div style="text-align: center; margin-top: 20px; font-size: 1.2em;">
-    <p>Hope to see us there hehe! 🏎️🏎️🏎️</p>
-</div>
-
+    <div class="bottom-text">
+        <p>Hope to see us there hehe! 🏎️🏎️🏎️</p>
+    </div>
 </body>
 </html>
