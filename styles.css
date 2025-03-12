@@ -19,7 +19,7 @@ body {
     font-size: 6rem;  /* Makes the car emoji large */
     position: absolute;
     left: -150px;
-    top: 50%;
+    top: 65%;
     transform: translateX(0) scaleX(-1);  /* Start off the screen on the left and flip it horizontally */
     transition: transform 2s ease-in-out;  /* Smooth transition for the car animation */
 }
